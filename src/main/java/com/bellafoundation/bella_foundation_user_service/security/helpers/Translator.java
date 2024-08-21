@@ -1,5 +1,6 @@
 package com.bellafoundation.bella_foundation_user_service.security.helpers;
 
+import com.bellafoundation.bella_foundation_user_service.security.entities.Status;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContext;
@@ -21,5 +22,12 @@ public class Translator {
     public static String toLocale(String msgCode , Object... args) {
         Locale locale = LocaleContextHolder.getLocale();
         return messageSource.getMessage(msgCode , args, locale);
+    }
+
+    public static Status toLocale(Status status, Object... args) {
+        Locale locale = LocaleContextHolder.getLocale();
+        status.setName(messageSource.getMessage(String.valueOf(status.getCode()), args, locale));
+
+        return status;
     }
 }

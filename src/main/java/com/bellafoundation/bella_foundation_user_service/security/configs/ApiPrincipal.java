@@ -23,10 +23,14 @@ public class ApiPrincipal implements UserDetails{
     private final String queryString;
     private final String ipAddress;
 
-    public ApiPrincipal(CredentialModel account, String password, String httpMethod, String requestBody, String queryString, String ipAddress) {
+    public ApiPrincipal(CredentialModel account, String token, String userType, String signature, String requestURI,
+                        String httpMethod, String requestBody, String queryString, String ipAddress) {
         this.account = account;
-        this.password = password;
-        this.httpMethod = httpMethod;
+        this.password = token;
+        this.signature = signature;
+        this.requestURI = requestURI;
+        this.userType =userType;
+        this.httpMethod =  httpMethod;
         this.requestBody = requestBody;
         this.queryString = queryString;
         this.ipAddress = ipAddress;

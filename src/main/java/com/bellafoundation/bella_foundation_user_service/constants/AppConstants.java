@@ -26,4 +26,30 @@ public interface AppConstants {
         public static final Integer SERVER_ERROR = HttpStatus.INTERNAL_SERVER_ERROR.value();
     }
 
+
+
+    class SystemCode {
+        public static final Integer REQUEST_TIMEOUT = 408;
+        public static final Integer GATEWAY_TIMEOUT = 504;
+        public static final Integer BAD_REQUEST = 400;
+        public static final Integer UNAUTHORIZED = 401;
+        public static final Integer FORBIDDEN_ACCESS = 403;
+        public static final Integer CONFLICT = 409;
+        public static final Integer OK = 200;
+        public static final Integer NO_CONTENT = 204;
+        public static final Integer RESOURCE_NOT_FOUND = 404;
+        public static final Integer UNKNOWN_ERROR = 900;
+        public static final Integer NULL_POINTER_EXCEPTION = 700;
+        public static final Integer NUMBER_FORMAT_EXCEPTION = 701;
+        public static final Integer ILLEGAL_ARGUMENT_EXCEPTION = 702;
+        public static final Integer RUNTIME_EXCEPTION = 703;
+        public static final Integer ILLEGAL_STATE_EXCEPTION = 704;
+        public static final Integer NO_SUCH_METHOD_EXCEPTION = 705;
+        public static final Integer CLASS_CAST_EXCEPTION = 706;
+        public static final Integer EXCEPTION = 707;
+        public static final Integer PARSE_EXCEPTION = 708;
+        public static final Integer INVOCATION_TARGET_EXCEPTION = 709;
+        public static final Integer BAD_KAFKA_RESPONSE = 800;
+    }
+
 }
