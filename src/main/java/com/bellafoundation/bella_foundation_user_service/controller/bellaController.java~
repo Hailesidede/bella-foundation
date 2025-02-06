@@ -1,0 +1,4 @@
+package com.bellafoundation.bella_foundation_user_service.controller;
+
+public class bellaController {
+}
